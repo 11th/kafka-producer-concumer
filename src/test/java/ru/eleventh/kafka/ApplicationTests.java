@@ -1,10 +1,10 @@
-package ru.eleventh.comunda_process;
+package ru.eleventh.kafka;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CamundaProcessApplicationTests {
+class ApplicationTests {
 
 	@Test
 	void contextLoads() {

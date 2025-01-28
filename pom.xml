@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ru.eleventh</groupId>
-	<artifactId>comunda-process</artifactId>
+	<artifactId>kafka-producer-consumer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>camunda-process</name>
-	<description>Camunda process</description>
+	<name>kafka-producer-consumer</name>
+	<description>Simple Kafka producer and consumer</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -37,14 +37,26 @@
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 
 		<dependency>
-			<groupId>io.camunda</groupId>
-			<artifactId>spring-zeebe-starter</artifactId>
-			<version>8.0.7</version>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+			<version>3.3.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.36</version>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 
@@ -53,6 +65,14 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>ru.eleventh.kafka.Application</mainClass>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
