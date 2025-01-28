@@ -1,2 +1,2 @@
-# comunda-process
+# kafka-producer-consumer
 Simple kafka producer consumer
